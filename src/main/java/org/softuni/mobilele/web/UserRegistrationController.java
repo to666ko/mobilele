@@ -24,7 +24,9 @@ public class UserRegistrationController {
     }
 
     @PostMapping("/register")
-    public String register(UserRegistrationDTO userRegistrationDTO ) {
+    public String register(UserRegistrationDTO userRegistrationDTO) {
+
+        //TODO: Registration email with activation link
 
         userService.registerUser(userRegistrationDTO);
 
