@@ -11,7 +11,7 @@ public class ModelEntity extends BaseEntity{
     private String name;
 
     @Enumerated(EnumType.STRING)
-    private ModelCategoryEnum modelCategory;
+    private ModelCategoryEnum category;
 
     @ManyToOne
     private BrandEntiy brand;
@@ -26,11 +26,11 @@ public class ModelEntity extends BaseEntity{
     }
 
     public ModelCategoryEnum getModelCategory() {
-        return modelCategory;
+        return category;
     }
 
     public ModelEntity setModelCategory(ModelCategoryEnum modelCategory) {
-        this.modelCategory = modelCategory;
+        this.category = modelCategory;
         return this;
     }
 

@@ -8,6 +8,8 @@ import jakarta.persistence.Table;
 @Table(name="brands")
 public class BrandEntiy extends BaseEntity{
 
+
+    //TODO: Rename to 'name' and make unique
     @Column(unique = true, nullable = false)
     private String brand;
 
