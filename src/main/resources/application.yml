@@ -15,3 +15,13 @@ spring:
 
 
 default.admin.pass: ${DEFAULT_ADMIN_PASS:topsecret}
+
+open.exchange.rates:
+  schema: https
+  host: openexchangerates.org
+  path: /api/latest.json
+  app_id: ${APP_ID:test}
+  symbols: EUR,BGN,XRP,BTC
+  enabled: true
+
+#https:///?app_id=test&show_alternative=1&symbols=EUR,BGN,XRP,BTC:
