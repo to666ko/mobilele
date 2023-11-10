@@ -11,10 +11,12 @@ spring:
       ddl-auto: update
   sql:
     init:
-      mode: always
+      mode: never
 
+mobilele:
+  default.admin.pass: ${DEFAULT_ADMIN_PASS:topsecret}
+  remember.me.key: ${REMEMBER_ME_KEY:topsecret}
 
-default.admin.pass: ${DEFAULT_ADMIN_PASS:topsecret}
 logging:
   level:
     org.hibernate.SQL: DEBUG
