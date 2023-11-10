@@ -11,10 +11,16 @@ spring:
       ddl-auto: update
   sql:
     init:
-      mode: never
+      mode: always
 
 
 default.admin.pass: ${DEFAULT_ADMIN_PASS:topsecret}
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
+    org.springframework.security: TRACE
+
 
 open.exchange.rates:
   schema: https
@@ -22,6 +28,6 @@ open.exchange.rates:
   path: /api/latest.json
   app_id: ${APP_ID:test}
   symbols: EUR,BGN,XRP,BTC
-  enabled: true
+  enabled: false
 
 #https:///?app_id=test&show_alternative=1&symbols=EUR,BGN,XRP,BTC:
